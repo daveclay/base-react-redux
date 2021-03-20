@@ -1,11 +1,25 @@
 import '../main.css'
+import {
+  onClick
+} from "../redux/actions"
+import {connect} from "react-redux";
 
-function App() {
-  return (
-      <div className="App">
-          Hello.
-      </div>
-  );
-}
+const App = ({onClick}) => (
+  <div className="App">
+    Hello.
+    <p/>
+    <button onClick={onClick}>Click</button>
+  </div>
+)
 
-export default App;
+const mapStateToProps = state => ({
+  // state
+})
+
+export default connect(
+  mapStateToProps,
+  {
+    onClick
+    // actions
+  }
+)(App);

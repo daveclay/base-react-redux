@@ -12,6 +12,12 @@ const init = (state, action) => {
   return state
 }
 
+const onClick = (state, action) => {
+  console.log("onClick!")
+  return state;
+}
+
 map('init', init)
+map('onClick', onClick)
 
 export const rootReducer = reducer

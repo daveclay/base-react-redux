@@ -5,3 +5,6 @@ export const init = () => ({
   type: 'init'
 })
 
+export const onClick = () => ({
+  type: 'onClick'
+})
