@@ -5,6 +5,7 @@ import {
 } from "../selectors/selectors"
 
 export const initialState = {
+  clickedOn: "Why not click a bit?"
 }
 
 const init = (state, action) => {
@@ -12,10 +13,10 @@ const init = (state, action) => {
   return state
 }
 
-const onClick = (state, action) => {
-  console.log("onClick!")
-  return state;
-}
+const onClick = (state, action) => ({
+  ...state,
+  clickedOn: "You last clicked on " + new Date()
+})
 
 map('init', init)
 map('onClick', onClick)

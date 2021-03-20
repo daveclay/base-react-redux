@@ -4,16 +4,16 @@ import {
 } from "../redux/actions"
 import {connect} from "react-redux";
 
-const App = ({onClick}) => (
+const App = ({clickedOn, onClick}) => (
   <div className="App">
-    Hello.
+    Hello. {clickedOn}
     <p/>
     <button onClick={onClick}>Click</button>
   </div>
 )
 
 const mapStateToProps = state => ({
-  // state
+  clickedOn: state.clickedOn
 })
 
 export default connect(
