@@ -1,14 +1,12 @@
 import '../main.css'
-import {
-  onClick
-} from "../redux/actions"
+import Actions from "../redux/actions"
 import {connect} from "react-redux";
 
 const App = ({clickedOn, onClick}) => (
   <div className="App">
     Hello. {clickedOn}
     <p/>
-    <button onClick={onClick}>Click</button>
+    <button name="Mr. Clicky" onClick={e => onClick(e)}>Click</button>
   </div>
 )
 
@@ -19,7 +17,7 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   {
-    onClick
+    onClick: Actions.onClick
     // actions
   }
 )(App);

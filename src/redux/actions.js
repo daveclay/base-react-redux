@@ -1,10 +1,9 @@
-import {
-} from "../selectors/selectors";
+import { addActionTypes } from "./utils/action-utils"
 
-export const init = () => ({
-  type: 'init'
+export default addActionTypes({
+  init: () => ({}),
+  onClick: event => ({
+    event: event
+  })
 })
 
-export const onClick = () => ({
-  type: 'onClick'
-})
